@@ -1,0 +1,133 @@
+# Main questions solutions:
+
+## Q1:What is the difference between mean, median and mode?
+
+  mean, median, and mode are the measures of central tendency most widely used in the field of descriptive statistics.
+i. Mean : commonly known as the average value is defined as sum of all the values divided by the total number of values.
+ii. Median : is used when numerical data is sorted in some order and it is the midpoint of the set, making it more resistant to outliers than the mean.
+iii. Mode : on the other hand, highlights the value that is most frequently observed in the set of data.
+
+# ---------------------------------------------------------------------------
+
+## Q2: What is the difference between left and right skewness of the data?
+
+  Skewness is a way to describe the symmetry of a distribution.
+i. A distribution is a *Right skewed* if it has a "Tail" on right side of the distribution. "Skewness is +ve"
+ii. A distribution is a *Left skewed* if it has a "Tail" on left side of the distribution. "Skewness is -ve"
+iii. skewness = 0 if the distribution is symmetric.
+
+# ---------------------------------------------------------------------------
+
+## Q3: What is the difference between list and tuples in Python?
+
+         List                                              :            Tuple
+List items enclosed in []                                  : Tuple items enclosed in (), and can remove them also.
+list are ordered, can use idex to access elements.         : Tuple are ordered, can use index to access elements.
+List are mutable, can use edit like add, replace or delete : Tuple cannot be edited
+both can have any type of data and both items aren't unique.
+
+# ---------------------------------------------------------------------------
+
+## Q4: How can you generate random numbers in Python?
+
+import random
+rand1 = random.random() # this a random floating number from 0 to 1
+print(rand1)
+rand2 = random.randint(1, 10) # this is a random intger number from 1 to 10
+print(rand2)
+
+# ---------------------------------------------------------------------------
+
+## Q5: What is break, continue and pass in Python?
+
+i. break: when a certain condition is true, and you want to end the loop now, "break" exit the loop.
+ii. continue: when you want to skip the rest of the code and go to the next iteration, "continue" skip the rest of the code.
+iii. pass: do nothing, it's a placeholder make the code looks correct.
+
+# ---------------------------------------------------------------------------
+
+## Q6: How can you reverse all the items in a list in Python using just one line of code?
+
+listname.reverse()
+
+# ---------------------------------------------------------------------------
+
+## Q7: Given a list of integers numbers = [3, 7, 2, 8, 1], write a Python code snippet to find and print the maximum value in the list.
+
+num = [3, 7, 2, 8, 1]
+print(max(num))
+--> another solution <--
+a = [3, 7, 2, 8, 1]
+def sort(mylist):
+    for i in range(len(mylist)):
+        for j in range(0, len(mylist) - 1):
+            if mylist[j] > mylist[j+1]:
+                mylist[j], mylist[j+1] = mylist[j+1], mylist[j]
+        return mylist
+sort(a)
+print(a[4])
+
+# ---------------------------------------------------------------------------
+
+## Q8: What is an outlier in a dataset, and how would you explain it to someone who is new to statistics?
+
+Outliers are a set of data points that are significantly different from the rest of the data in the group.
+The difference is either much larger or much smaller than the others. This disrupts the data distribution and causes errors in data collection.
+For example, in a dataset of monthly sales numbers, if the revenue for one month is much higher than the rest, identifying those high sales would be considered unusual.
+Therefore, outliers distort results and indicate special or rare occurrences. Hence, they must be identified and removed.
+
+# ---------------------------------------------------------------------------
+
+## figure 1:
+
+1. median = 
+dataset = {4, 1, 2, 1, 3, 2, 1, 1}
+after sorting = {1, 1, 1, 1, 2, 2, 3, 4}
+middle integers = 1, 2
+mean = (1+2)/2 = 3/2 = 1.5 = median #
+
+2. standard deviation =
+mean = (4+1+2+1+3+2+1+1)/8 = 15
+s = sqrt(sum(x-mean)^2/n-1)
+s = sqrt(1387/7) = 14.076
+
+# ---------------------------------------------------------------------------
+
+## figure 2:
+
+ans = a.The mean is greater than the median because "the distribution is right skewed and the mean is affected by the higher value in the tails and the median is less sensitive"
+
+# ---------------------------------------------------------------------------
+
+## PS problems:
+
+i. codeforces problem A:
+
+a = int(input("Limak weight = "))
+b = int(input("Bob weight = "))
+years = 0
+while b >= a:
+    years = years + 1
+    b = b * 2
+    a = a * 3
+print(years)
+
+ii. codeforces problem B:
+
+s = input().lower().strip()
+word = "hello"
+x=0
+for a in s:
+    if a == word[x]:
+        x = x + 1
+    if x == len(word):
+        break
+if x == len(word):
+    print("Yes")
+else:
+    print("No")
+
+# ---------------------------------------------------------------------------
+
+
+

@@ -24,7 +24,7 @@ iii. skewness = 0 if the distribution is symmetric.
 List items enclosed in []                                  : Tuple items enclosed in (), and can remove them also.
 list are ordered, can use idex to access elements.         : Tuple are ordered, can use index to access elements.
 List are mutable, can use edit like add, replace or delete : Tuple cannot be edited
-both can have any type of data and both items aren't unique.
+                        both can have any type of data and both items aren't unique.
 
 # ---------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ listname.reverse()
 
 num = [3, 7, 2, 8, 1]
 print(max(num))
---> another solution <--
+--> another solution using function <--
 a = [3, 7, 2, 8, 1]
 def sort(mylist):
     for i in range(len(mylist)):
@@ -103,14 +103,15 @@ ans = a.The mean is greater than the median because "the distribution is right s
 
 i. codeforces problem A:
 
-a = int(input("Limak weight = "))
-b = int(input("Bob weight = "))
+a = int(input())
+b = int(input())
 years = 0
 while b >= a:
     years = years + 1
     b = b * 2
     a = a * 3
 print(years)
+------------------------------------
 
 ii. codeforces problem B:
 
@@ -129,5 +130,56 @@ else:
 
 # ---------------------------------------------------------------------------
 
+## Bonus:
 
+1. Codeforces problem:
 
+i = int(input())
+
+for x in range(i):
+    n = int(input())
+    a = list(map(int, input().split()))
+    maxVal = max(a)
+    operation = 0
+
+    while min(a) < maxVal:
+        pos = [y for y in range(n) if a[y] < maxVal]
+        for y in pos:
+            a[y] = a[y] + 1
+        operation = operation + 1
+
+    print(operation)
+-------------------
+# from previouse sol. i got this another sol. :
+i = int(input())
+
+for x in range(i):
+    n = int(input())
+    a = list(map(int, input().split()))
+    operation = max(a) - min(a)
+    print(operation)
+
+-----------------------------------------------------
+
+2. What is the difference between machine learning and traditional programming?
+                 machine learning                        :               traditional programing           
+- it is a subset of AI, focus on learning from data      : - rule based code is written by the developers depending on the problem.   
+to develop an algorithm can be used to prediction.
+- learning from historical data abd then make prediction : - it hasn't self learning, it's rule based and deterministic.
+on new data.
+- find patterns in large dataset might be difficult for  : - it is totally dependant on developers's intelligence.
+humans to discover.
+
+-----------------------------------------------------
+
+3. State some examples of machine learning models?
+a) Supervised Models:
+Supervised learning is the study of algorithms that use labeled data in which each data instance has a known category or value to which it belongs.
+This results in the model to discover the relationship between the input features and the target outcome.
+
+b) Unsupervised Models
+Unsupervised learning involves a difficult task of working with data which is not provided with pre-defined categories or label.
+
+c) Semi-Supervised Model
+Supervised learning is such a kind of learning with labeled data that unsupervised learning, on the other hand, solves the task where there is no labeled data.
+Semi-supervised learning fills the gap between the two. It reveals the strengths of both approaches by training using data sets labeled along with unlabeled one.
